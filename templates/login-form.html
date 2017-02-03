@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-4 col-sm-3"><h2>login</h2>
+      <form method="post">
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+          <input class="form-control" type="text" placeholder="Email address" name="username" value="{{username}}">
+        </div>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+          <input class="form-control" type="password" placeholder="Password" name="password" value="">
+        </div>
+        <div class="error">{{error}}</div>
+        <br>
+        <button class="btn btn-default" type="submit"  aria-label="Login">
+          <i class="fa fa-floppy-o" aria-hidden="true">&nbsp;Login</i>
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

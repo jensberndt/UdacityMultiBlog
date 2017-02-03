@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-7 col-sm-6">
+      <h2>
+      {% if action != 'None' %}
+        {{action}}
+      {% else %}
+        new
+      {% endif %}
+       post</h2>
+
+      <form method="post">
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-pencil-square-o transparent"></i></span>
+          <input class="form-control" type="text" placeholder="Headline of your post" name="subject" value="{{subject}}">
+        </div>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-pencil-square-o transparent"></i></span>
+          <textarea class="form-control multiinput" type="textarea" placeholder="Enter your message" name="content" cols="100" rows="10">{{content}}</textarea>
+        </div>
+        <div class="error">{{error}}</div>
+        <br>
+        <button class="btn btn-default" type="submit"  aria-label="Save post">
+          <i class="fa fa-floppy-o" aria-hidden="true">&nbsp;Save post</i>
+        </button>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

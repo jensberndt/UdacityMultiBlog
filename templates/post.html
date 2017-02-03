@@ -1,0 +1,39 @@
+  <div class="row">
+      <div class="col-md-12 col-sm-11">
+        <h2 class="page-header">
+        {{p.subject}}
+          <div class="pull-right text-default margin-top padding-top-sm hidden-xs">
+            <a class="link-area">{{p.created.strftime("%b %d, %Y")}}</a>
+          </div>
+        </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-sm-9">
+      <div>
+       <i class="fa fa-quote-left fa-2x fa-pull-left fa-border" aria-hidden="true"></i>{{p._render_text | safe}}
+      </div>
+      <hr>
+      {% for comment in p.comments %}
+        <div class="note-box note-box-example">
+          <div class="note-box-text" >
+            {{comment.comment}}
+          </div>
+            <p class="note-box-title">
+              <a href="/blog/editcomment/{{comment.key().id_or_name()}}">edit</a>&nbsp;|&nbsp;
+              <a href="/blog/deletecomment/{{comment.key().id_or_name()}}">delete</a>
+            </p>
+          </div>
+          <br />
+      {% endfor %}
+    </div>
+    <div class="col-md-2 col-sm-2">
+      <div class="list-group">
+        <a class="list-group-item" href="/blog/editpost/{{p._idIneed}}"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>&nbsp;Edit</a>
+        <a class="list-group-item" href="/blog/deletepost/{{p._idIneed}}"><i class="fa fa-trash-o fa-fw" aria-hidden="true"></i>&nbsp;Delete</a>
+        <a class="list-group-item" href="/blog/likeornotpost/like/{{p._idIneed}}"><i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>&nbsp;Like&nbsp;({{p.likes}})</a>
+        <a class="list-group-item" href="/blog/likeornotpost/unlike/{{p._idIneed}}"><i class="fa fa-thumbs-o-down fa-fw" aria-hidden="true"></i>&nbsp;Unlike&nbsp;({{p.unlikes}})</a>
+        <a class="list-group-item" href="/blog/newcomment/{{p._idIneed}}/0"><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>&nbsp;Comment</a>
+      </div>
+    </div>
+  </div>

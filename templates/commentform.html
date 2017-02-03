@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-7 col-sm-6">
+      <h2>comment on a post</h2>
+      <h3>{{postsubject}}</h3>
+      <h4>{{postcontent}}</h4>
+      <form method="post">
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-pencil-square-o transparent"></i></span>
+          <textarea class="form-control multiinput" type="textarea" placeholder="Enter your comment" name="comment" cols="100" rows="10">{{comment}}</textarea>
+        </div>
+        <div class="error">{{error}}</div>
+        <br>
+        <button class="btn btn-default" type="submit"  aria-label="Save comment">
+          <i class="fa fa-floppy-o" aria-hidden="true">&nbsp;Save comment</i>
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

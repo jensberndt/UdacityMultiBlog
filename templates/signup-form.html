@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-4 col-sm-3"><h2>signup</h2>
+      <form method="post">
+        <span class="error">{{error_username}}</span>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></span>
+          <input class="form-control" type="text" placeholder="username" name="username" value="{{username}}">
+        </div>
+        <span class="error">{{error_password}}</span>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+          <input class="form-control" type="password" placeholder="password" name="password" value="">
+        </div>
+        <span class="error">{{error_verify}}</span>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+          <input class="form-control" type="password" placeholder="retype password" name="verify" value="">
+        </div>
+        <span class="error">{{error_email}}</span>
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+          <input class="form-control" type="text" placeholder="email (optional)" name="email" value="{{email}}">
+        </div>
+        <br>
+        <button class="btn btn-default" type="submit"  aria-label="Signup">
+          <i class="fa fa-floppy-o" aria-hidden="true">&nbsp;Signup</i>
+        </button>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

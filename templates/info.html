@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-9 col-sm-8"><h2>info</h2>
+      <form method="">
+        <div class="input-group margin-bottom-sm">
+          <hr>
+          <h3>Post: {{ subject }}</h3>
+          <div class="error">{{ error }}</div>
+          <br>
+        </div>
+        <button class="btn btn-default" type="submit" formaction="/info" aria-label="Ok, understand">
+          <i class="fa fa-hand-o-left" aria-hidden="true">&nbsp;Ok, I understand</i>
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
