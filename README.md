@@ -1,5 +1,4 @@
 # Multi User Blog
-### Installation
-In order to review the Multi-User-Blog just extract the project.zip.
+### Demo
 
-The porject is deployed on https://help-udacity.appspot.com/blog.
+Here: https://help-udacity.appspot.com/blog.
