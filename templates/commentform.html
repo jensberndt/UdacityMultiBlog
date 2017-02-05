@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
   <div class="row">
     <div class="col-md-7 col-sm-6">
       <h2>comment on a post</h2>
@@ -15,6 +20,9 @@
         <br>
         <button class="btn btn-default" type="submit"  aria-label="Save comment">
           <i class="fa fa-floppy-o" aria-hidden="true">&nbsp;Save comment</i>
+        </button>
+        <button class="btn btn-default" type="submit" formaction="/blog" formmethod="get" aria-label="Go back" >
+          <i class="fa fa-caret-square-o-left" aria-hidden="true">&nbsp;Go Back</i>
         </button>
       </form>
     </div>
